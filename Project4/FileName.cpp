@@ -13,10 +13,17 @@ int* newArray(int size) {
 }
 
 void initArray(int* array, int size) {
-	cout << "¬ведыть значенн€ дл€ масива: ";
+	cout << "¬вед≥ть значенн€ дл€ масива: ";
 	for (int i = 0; i < size; i++) {
 		cin >> array[i];
 	}
+}
+
+void coutArray(int* array, int size) {
+	for (int i = 0; i < size; i++) {
+		cout << array[i] << " ";
+	}
+	cout << endl;
 }
 
 int main() {
@@ -26,5 +33,6 @@ int main() {
 		Size = inSize(Size);
 		int* Array = newArray(Size);
 		initArray(Array, Size);
+		coutArray(Array, Size);
 	}
 }
