@@ -26,6 +26,17 @@ void coutArray(int* array, int size) {
 	cout << endl;
 }
 
+int findMinElement(int size, int* array) {
+	int count = array[0], result = 0;
+	for (int i = 0; i < size; i++) {
+		if (array[i] < count) {
+			count = array[i];
+			result = i;
+		}
+	}
+	return result;
+}
+
 int main() {
 	setlocale(LC_ALL, "rus");
 	int Size = 0;
@@ -34,5 +45,6 @@ int main() {
 		int* Array = newArray(Size);
 		initArray(Array, Size);
 		coutArray(Array, Size);
+		cout <<"Індекс мінімального елемента: " << findMinElement(Size, Array) << endl;
 	}
 }
